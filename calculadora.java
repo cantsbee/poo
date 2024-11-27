@@ -7,17 +7,19 @@ public class calculadora {
     int num1;
     String operador;
     int num2;
-}
+
 
 public static void main (String[]args){
 
 Scanner sc = new Scanner(System.in);
-calculadora objCalculadora = new calculadora();
-
+int num1 = sc.nextInt();
+int num2 = sc.nextInt();
+calculadora objCalculadora = new calculadora(num1, "operador", num2);
+sc.close();
 }
 
 public calculadora (int num1, String operador, int num2){
-    this. = num1;
-    this.ciudad = operador;
-    this.anio = num2;
-}
+    this.num1 = num1;
+    this.operador = operador;
+    this.num2 = num2;
+}}
