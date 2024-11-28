@@ -1,0 +1,29 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class Libro {
+   String titulo;
+   String autor;
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.println("Introduzca el t\u00edtulo:");
+      String var2 = var1.nextLine();
+      System.out.println("Introduzca el autor:");
+      String var3 = var1.nextLine();
+      Libro var4 = new Libro(var2, var3);
+      var4.cambiarTitulo(var2);
+   }
+
+   public Libro(String var1, String var2) {
+      this.titulo = var1;
+      this.autor = var2;
+   }
+
+   public void cambiarTitulo(String var1) {
+      Scanner var2 = new Scanner(System.in);
+      System.out.println("INTRODUZCA EL NUEVO T\u00cdTULO:");
+      String var3 = var2.nextLine();
+      System.out.println("El nuevo titulo es " + var3);
+   }
+}

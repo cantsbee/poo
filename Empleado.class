@@ -1,0 +1,43 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class Empleado {
+   String nombre;
+   double sueldo;
+   String puesto;
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.println("Introduzca el nombre: ");
+      String var2 = var1.nextLine();
+      System.out.println("Introduzca el  sueldo: ");
+      double var3 = var1.nextDouble();
+      var1.nextLine();
+      System.out.println("Introduzca el puesto: ");
+      String var5 = var1.nextLine();
+      Empleado var6 = new Empleado(var2, var3, var5);
+      var6.mostrarInfo();
+      var6.aumentarSueldo(var3);
+      var1.close();
+   }
+
+   public Empleado(String var1, double var2, String var4) {
+      this.nombre = var1;
+      this.sueldo = var2;
+      this.puesto = var4;
+   }
+
+   public void mostrarInfo() {
+      System.out.println("El nombre del empleado es " + this.nombre + ", su sueldo es " + this.sueldo + " y su puesto es " + this.puesto);
+      System.out.println("El sueldo aumentado es " + this.aumentarSueldo(this.sueldo));
+   }
+
+   public double aumentarSueldo(double var1) {
+      Scanner var3 = new Scanner(System.in);
+      System.out.println("Introduzca el porcentaje de aumento:");
+      double var4 = var3.nextDouble();
+      double var6 = var1 + var1 * var4 / 100.0;
+      var3.close();
+      return var6;
+   }
+}
