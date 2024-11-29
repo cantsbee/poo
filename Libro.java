@@ -17,9 +17,13 @@ public static void main (String[]args){
     System.out.println("Introduzca el autor:");
     String autor = scanner.nextLine();
     Libro libro = new Libro(titulo, autor);
-    
-    libro.cambiarTitulo(titulo);
+    System.out.println("El titulo es:" + libro.titulo);
+    System.out.println("INTRODUZCA EL NUEVO TÍTULO:");
+    String nuevoTitulo = scanner.nextLine();
+    libro.cambiarTitulo(nuevoTitulo);
+    System.out.println("El  nuevo titulo es:" + libro.titulo);
     scanner.close();
+
 }
 
 public Libro (String titulo, String autor) {
@@ -28,10 +32,8 @@ public Libro (String titulo, String autor) {
 } 
 
 public void  cambiarTitulo(String titulo){
-    Scanner scanner = new Scanner (System.in);
-System.out.println("INTRODUZCA EL NUEVO TÍTULO:");
-String nuevoTitulo = scanner.nextLine(); 
-System.out.println("El nuevo titulo es " + nuevoTitulo);
-scanner.close();
+   
+this.titulo = titulo; 
+
 }
 }
